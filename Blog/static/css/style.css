@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --mainColor: #64bcf4;
+    --hoverColor: #5bacdf;
+    --backgroundColor: #f1f8fc;
+    --darkOne: #312f3a;
+    --darkTwo: #45424b;
+    --lightOne: #919191;
+    --lightTwo: #aaa;
+}
+
+
+*, 
+*::before, 
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wrapper{
+    padding: 1.7rem 0 2rem;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color:  #f1f8fc;
+}
+
+.container{
+    position: relative;
+    max-width: 81rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3rem;
+    z-index: 10;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo img{
+    width: 40px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.logo h3{
+    color:  #45424b;
+    font-size: 1.55rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.links ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.links a:hover{
+    color: #5bacdf;
+    transform: scale(1.05);
+}
+
+.links a{
+    color: #aaa;
+    margin-left: 4.5rem;
+    display: inline-block;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.9rem;
+    color: rgb(255, 255, 255) !important;
+    background-color: var(--mainColor);
+    border-radius: 26px;
+    text-transform: capitalize;
+}
+
+.btn:hover{
+    background-color: #5bacdf;
+    transform: scale(1);
+}
