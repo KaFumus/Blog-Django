@@ -6,17 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{% static 'css/login.css' %}" rel="stylesheet">
-    <title>{% block title %}Register{% endblock title %}Register</title>
+    <title>{% block title %}Register{% endblock title %}</title>
 </head>
 <body>
+  {% block content %}
   <div class="wrapper">
       <h1>Sign Up</h1>
-      <form action="#">
-          <input type="text" placeholder="Username">
-          <input type="text" placeholder="Name">
+      <form method="POST" action="#">
+        {% csrf_token %}
+        {{form.as_p}}
+        
+          {% comment %} <input type="text" placeholder="Username">
+          <input type="text" placeholder="Email">
           <input type="password" placeholder="Password">
-          <input type="password" placeholder="Re-Password">
-      </form>
+          <input type="password" placeholder="Re-Password"> {% endcomment %}
+      
       <div class="terms">
           <input type="checkbox" id="checkbox">
           <label for="checkbox">I agree to these <a href="#">Terms & Conditions</a></label>
@@ -25,6 +29,8 @@
       <div class="member">
           Already member? <a href="{% url 'login' %}">Login here</a>
       </div>
+    </form>
   </div>
+  {% endblock content %}
 </body>
 </html>
